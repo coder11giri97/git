@@ -16,17 +16,50 @@
 
 
 //QuerySelector
- const li_2 = document.querySelector(".list-group-item:nth-child(1)");
-li_2.style.backgroundColor = "green";
+//  
 
-const li_3 = document.querySelector(".list-group-item:nth-child(2)");
- li_3.style.display = "none";
 
-// QuerySelectorAll
- const li = document.querySelectorAll("li");
- li[1].style.backgroundColor = "green";
 
- const odd = document.querySelectorAll("li:nth-child(odd)");
-for(let el of odd){
-   el.style.backgroundColor = "green";
-}
+
+
+//DOM Manipulation
+//  const li = document.querySelector('.list-group');
+//  console.log(li.parentElement);
+//  li.parentElement.style.backgroundColor = "grey";
+
+// console.log(li.lastElementChild);
+// li.lastElementChild.style.backgroundColor = "grey";
+
+// console.log(li.lastChild);
+
+// console.log(li.firstElementChild);
+// li.firstElementChild.style.backgroundColor = "grey";
+
+// console.log(li.firstChild);
+// console.log(li.nextSibling);
+
+// console.log(li.nextElementSibling);
+// li.nextElementSibling.style.backgroundColor = "grey";
+
+// console.log(li.previousSibling);
+
+// console.log(li.previousElementSibling);
+// li.previousElementSibling.style.backgroundColor = "grey";
+
+
+ const newDiv = document.createElement('div');
+ newDiv.setAttribute("title", "hello world");
+
+ const helloText = document.createTextNode("Hello world");
+newDiv.appendChild(helloText);
+
+ const container = document.querySelector("header .container");
+ const h1 = document.querySelector("header h1");
+
+ container.insertBefore(newDiv, h1);
+
+ const ul = document.querySelector("ul");
+console.log(ul);
+ const list = document.querySelector("li");
+
+ ul.insertBefore(newDiv, list);
